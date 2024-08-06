@@ -1,0 +1,14 @@
+#include <string>
+#include <vector>
+
+using namespace std;
+
+int solution(string my_string, string is_prefix) {
+    int answer = 0;
+    if(((1 <=my_string.length())&&(my_string.length()<=100)) &&
+       ((1 <=is_prefix.length())&&(is_prefix.length()<=100)) )
+       {
+           answer = my_string.substr(0, is_prefix.length()).compare(is_prefix) == 0;
+       }
+    return answer;
+}

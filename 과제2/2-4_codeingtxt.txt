@@ -1,0 +1,14 @@
+#include <string>
+#include <vector>
+
+using namespace std;
+
+int solution(int a, int b) {
+    int answer = 0;
+    std::string a_str = std::to_string(a);
+    std::string b_str = std::to_string(b);
+    int ab = std::stoi(a_str + b_str);
+    int ba = std::stoi(b_str + a_str);
+    answer = std::max(ab, ba);
+    return answer;
+}
